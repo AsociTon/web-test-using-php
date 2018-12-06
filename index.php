@@ -3,7 +3,7 @@
     $flag = 0;
     $i = 1;
     while($i < $_GET["num"]){
-      if($i%$_GET["num"]==0){
+      if(($_GET["num"]%$i) == 0){
         $flag  = 1;
         echo "<h1>".$_GET["num"]." is not prime.</h1>";
       }
