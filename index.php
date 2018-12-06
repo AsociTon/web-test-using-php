@@ -15,6 +15,6 @@
 ?>
 
 <form>
-  <input name = "num" type = "number">
+  <input name = "num" type = "text">
   <input type = "submit" value = "is prime?">
 </form>
