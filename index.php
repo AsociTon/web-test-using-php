@@ -5,12 +5,14 @@
     while($i < $_GET["num"]){
       if(($_GET["num"]%$i) == 0){
         $flag  = 1;
-        echo "<h1>".$_GET["num"]." is not prime.</h1>";
+        $i=$_GET["num"];
       }
       $i++;
     }
-    if($flag == 0){
+    if($flag == 0|| $_GET["num"] == 2){
       echo "<h1>".$_GET["num"]." is prime.</h1>";
+    }else{
+      echo "<h1>".$_GET["num"]." is not prime.</h1>";
     }
   }
 ?>
