@@ -1,7 +1,7 @@
 <?php
   if(is_numeric($_GET["num"])){
     $flag = 0;
-    $i = 1;
+    $i = 2;
     while($i < $_GET["num"]){
       if(($_GET["num"]%$i) == 0){
         $flag  = 1;
