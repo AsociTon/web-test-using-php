@@ -2,18 +2,18 @@
 $errMsg = "";
 $sucMsg = "";
 if($_GET["email"]){
-  if (!filter_var($_GET["email"], FILTER_VALIDATE_EMAIL)) {
-    $errMsg += "It is not a valid email address";
+  if (filter_var($_GET["email"], FILTER_VALIDATE_EMAIL) == false) {
+    $errMsg .= "It is not a valid email address";
   }
 }
 else{
-  $errMsg += "Email address is required";
+  $errMsg .= "Email address is required";
 }
 if(!$_GET["subject"]){
-  $errMsg += "Subject is required";
+  $errMsg .= "Subject is required";
 }
 if(!$_GET["text_area"]){
-  $errMsg += "Query is required";
+  $errMsg .= "Query is required";
 }
 
 if(sizeof($errMsg) == 0){
